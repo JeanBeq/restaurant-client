@@ -4,7 +4,4 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
   ],
   plugins: ['@/plugins/fetch'],
-  router: {
-    middleware: ['auth'],
-  },
 });
