@@ -28,7 +28,7 @@ const router = useRouter();
 const login = async () => {
   const response = await authStore.login(email.value, password.value);
   if (response.success) {
-    router.push('/');
+    router.push('/restaurant');
   } else {
     console.error('Login failed:', response.error);
     alert('Login failed. Please check your credentials.');
@@ -37,7 +37,7 @@ const login = async () => {
 
 onMounted(() => {
   if (authStore.token) {
-    router.push('/');
+    router.push('/restaurant');
   }
 });
 </script>
